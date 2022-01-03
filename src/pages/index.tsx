@@ -65,7 +65,7 @@ console.log(firstPokemon.data);
 }
 
 
-type PokemonFromServer = inferQueryResponse<"get-pokemon-by-id">;
+type PokemonFromServer = inferQueryResponse<"get-pokemon-by-Id">;
 
 const PokemonListing: React.FC<{
   pokemon: PokemonFromServer; 
