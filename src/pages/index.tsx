@@ -3,6 +3,7 @@ import { trpc } from "@/utils/trpc";
 import { useState } from "react";
 import type React from "react";
 import { inferQueryResponse } from "./api/trpc/[trpc]";
+import Image from "next/image";
 
 
 const btn =
@@ -34,7 +35,7 @@ export default function Home() {
 console.log(firstPokemon.data);
 
   return (
-    <div className="h-screen w-screen flex flex-col justify-center items-center">
+    <div className="h-screen w-screen flex flex-col justify-center items-center relative">
       <div className="text-2xl text-center">Which Pokemon is Rounder?</div>
       <div className="p-2"/>      
       <div className="border rounded p-8 flex justify-between items-center max-w-2xl">        
@@ -57,6 +58,7 @@ console.log(firstPokemon.data);
   
         <div className="p-2"/>
       </div>      
+      <div className="absolute bottom-0 w-full text-xl text-center pb-2"><a href="https://github.com/jad-delgadillo/pokemon-round-app">GitHub</a></div>
     </div>
   );
   
@@ -73,7 +75,11 @@ const PokemonListing: React.FC<{
    
   return (
     <div className="flex flex-col items-center">
-      <img src={props.pokemon.sprites.front_default} className="w-64 h-64" />
+      <Image src={props.pokemon.sprites.front_default} 
+      width={256} 
+      height={256} 
+      layout="fixed"
+      />
       <div className="text-xl text-center capitalize mt-[-2rem]">
       {props.pokemon.name}
      </div>
