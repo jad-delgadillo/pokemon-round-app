@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/alt-text */
 import { getOptionsForVote } from "@/utils/getRandomPokemon";
 import { trpc } from "@/utils/trpc";
 import { useState } from "react";
@@ -75,7 +76,8 @@ const PokemonListing: React.FC<{
    
   return (
     <div className="flex flex-col items-center">
-      <Image src={props.pokemon.sprites.front_default} 
+      <Image 
+      src={props.pokemon.sprites.front_default} 
       width={256} 
       height={256} 
       layout="fixed"
