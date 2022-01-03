@@ -30,7 +30,7 @@ console.log(firstPokemon.data);
       <div className="p-2"/>      
       <div className="border rounded p-8 flex justify-between items-center max-w-2xl">        
       
-      <div className="w-64 h-64 flex flex-col items-center">
+      <div className="w-48 h-48 flex flex-col items-center">
         <img 
         src={firstPokemon.data?.sprites.front_default} 
         className="w-full" 
@@ -42,7 +42,7 @@ console.log(firstPokemon.data);
       </div>
      
       <div className="p-8">VS</div>
-      <div className="w-64 h-64 flex flex-col items-center">
+      <div className="w-48 h-48 flex flex-col items-center">
         <img 
         src={secondPokemon.data?.sprites.front_default} 
         className="w-full" 
