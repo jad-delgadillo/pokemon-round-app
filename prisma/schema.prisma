@@ -11,6 +11,7 @@ datasource db {
   shadowDatabaseUrl = env("SHADOW_URL")
 }
 
+
  
 model Vote {
   id        String   @id @default(cuid())
