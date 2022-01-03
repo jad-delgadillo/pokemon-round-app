@@ -19,7 +19,7 @@ export default function Home() {
     const voteForRoundest = (selected: number) => {
       // todo: fire mutation to pesist changes
 
-      updatedIds(getOptionsForVote())
+      updateIds(getOptionsForVote())
     }
   
 console.log(firstPokemon.data);
